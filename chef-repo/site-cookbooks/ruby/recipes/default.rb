@@ -21,8 +21,15 @@ execute "ruby install" do
   action :run
 end
 
-#globalの切り替え
+# globalの切り替え
 execute "ruby change" do
   command "source /etc/profile.d/rbenv.sh; rbenv global #{node.build};rbenv rehash"
+  action :run
+end
+
+# railsのインストール
+execute "rails.install" do
+  command "gem install --no-ri --no-rdoc rails;"
+  command "source /etc/profile.d/rbenv.sh; gem install --no-ri --no-rdoc rails;rbenv rehash"
   action :run
 end
