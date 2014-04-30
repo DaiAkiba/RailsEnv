@@ -16,14 +16,14 @@ end
 
 # rubyをインストール
 execute "ruby install" do
-  not_if "source /etc/profile.d/rbenv.sh; rbenv versions | grep #{node.ruby-version}"
-  command "source /etc/profile.d/rbenv.sh; rbenv install #{node.ruby-version}"
+  not_if "source /etc/profile.d/rbenv.sh; rbenv versions | grep #{node.ruby_version}"
+  command "source /etc/profile.d/rbenv.sh; rbenv install #{node.ruby_version}"
   action :run
 end
 
 # globalの切り替え
 execute "ruby change" do
-  command "source /etc/profile.d/rbenv.sh; rbenv global #{node.ruby-version};rbenv rehash"
+  command "source /etc/profile.d/rbenv.sh; rbenv global #{node.ruby_version};rbenv rehash"
   action :run
 end
 
