@@ -14,16 +14,16 @@ template "/etc/profile.d/rbenv.sh" do
   mode 0644
 end
 
-# ruby 1.9.3-p392をインストール
+# rubyをインストール
 execute "ruby install" do
-  not_if "source /etc/profile.d/rbenv.sh; rbenv versions | grep #{node.build}"
-  command "source /etc/profile.d/rbenv.sh; rbenv install #{node.build}"
+  not_if "source /etc/profile.d/rbenv.sh; rbenv versions | grep #{node.ruby-version}"
+  command "source /etc/profile.d/rbenv.sh; rbenv install #{node.ruby-version}"
   action :run
 end
 
 # globalの切り替え
 execute "ruby change" do
-  command "source /etc/profile.d/rbenv.sh; rbenv global #{node.build};rbenv rehash"
+  command "source /etc/profile.d/rbenv.sh; rbenv global #{node.ruby-version};rbenv rehash"
   action :run
 end
 
