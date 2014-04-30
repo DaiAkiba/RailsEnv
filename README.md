@@ -3,6 +3,16 @@ RailsEnv
 
 Rails Environment
 
+## Requirements
+
+[VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
+[Vagrant](http://www.vagrantup.com/downloads.html)
+
+[Chef Client](http://www.getchef.com/chef/install/)
+
+[knife-solo](https://github.com/matschaffer/knife-solo)
+
 ## Get Started
 
 ### 1. get environment
