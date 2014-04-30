@@ -3,7 +3,7 @@ RailsEnv
 
 Rails Environment
 
-## How to use
+## Get Started
 
 ### 1. get environment
 
