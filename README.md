@@ -14,6 +14,7 @@ $ git clone https://github.com/DaiAkiba/RailsEnv.git
 ### 2. make up vagrant
 
 ``` bash
+$ cd ./RailsEnv
 $ vagrant up
 $ vagrant ssh-config --host vagrant >> ~/.ssh/config
 ```
@@ -21,6 +22,7 @@ $ vagrant ssh-config --host vagrant >> ~/.ssh/config
 ### 3. prepare knife environment to the vagrant
 
 ``` bash
+$ cd ./chef-repo
 $ knife solo prepare vagrant
 ```
 
