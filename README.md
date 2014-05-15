@@ -36,6 +36,8 @@ $ cd ./chef-repo
 $ knife solo prepare vagrant
 ```
 
+This command may fail once..Please retry same command, then success.
+
 ### 4. cook the vagrant environment
 
 ``` bash
