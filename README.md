@@ -13,6 +13,8 @@ Rails Environment
 
 [knife-solo](https://github.com/matschaffer/knife-solo)
 
+[Berkshelf](https://github.com/DaiAkiba/RailsEnv/wiki/BerkShelf%E5%B0%8E%E5%85%A5%E6%89%8B%E9%A0%86)
+
 ## Get Started
 
 ### 1. get environment
@@ -38,7 +40,14 @@ $ knife solo prepare vagrant
 
 This command may fail once..Please retry same command, then success.
 
-### 4. cook the vagrant environment
+
+### 4. get vendor cookbooks by Berkshelf
+
+``` bash
+$ berks vendor ./cookbooks
+```
+
+### 5. cook the vagrant environment
 
 ``` bash
 $ knife solo cook vagrant
